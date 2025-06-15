@@ -26,8 +26,15 @@ public class PhoneBookSelectors {
         headerAbout.click();
         pause(2);
 
+        WebElement div = driver.findElement(By.cssSelector("div[class=\"about_main__2Uv5W\"]"));
+        String divText = div.getText();
+        System.out.println(divText);
+        WebElement h1 = driver.findElement(By.cssSelector("div[class='about_main__2Uv5W']>h1"));
+        System.out.println("h1-->" + h1.getText());
+
 
         WebElement headerLogin = driver.findElement(By.cssSelector("a[href='/login']"));
+       // WebElement btnLogin = driver.findElement(By.cssSelector("div[class=\"navbar-component_nav__1X_4m\"]a:nth-child(4)"));
         headerLogin.click();
         headerLogin.getText();
         System.out.println(headerLogin.getText());
